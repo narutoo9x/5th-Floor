@@ -5,11 +5,7 @@ class FoodItem < ApplicationRecord
 	# validates :image_url, :format => { :with => URI::regexp(%w(http https)), :message => "Valid URL required"}
 
 	def self.search(search)
-			if search
-				where("name ILIKE ?", "%#{search}%")
-			else
-				all
-			end
+		where("name ILIKE ?", "%#{search}%")
 	end
 
 	def image_url_or_default

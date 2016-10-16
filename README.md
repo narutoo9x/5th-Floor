@@ -1,12 +1,14 @@
-# 5th-Floor Website
+# 5Floor Website
 
 **5th-Floor** is a Ruby on Rails restaurant website let users order foods.
 
 Submitted by: Thanh Ngo Khac
 
-Time spent: 0 hours and doing (TODO)
+Time spent: 10 hours and doing (TODO)
 
-URL: **heroku-app-url**
+---------
+### [**deploy heroku**](https://restaurant-cs.herokuapp.com/)
+---------
 
 ## User Stories
 
