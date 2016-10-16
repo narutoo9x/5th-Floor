@@ -2,7 +2,7 @@ class FoodItemsController < ApplicationController
 	before_action :set_food_item, only: [:show, :edit, :destroy, :update]
 
 	def index
-		@food_items = FoodItem.all.order("created_at DESC")
+		@food_items = FoodItem.search(params[:search]).order("created_at DESC")
 	end
 
 	def new

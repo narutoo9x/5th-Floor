@@ -2,7 +2,7 @@
 
 **5th-Floor** is a Ruby on Rails restaurant website let users order foods.
 
-Submitted by: Thanh Ngo Khac    
+Submitted by: Thanh Ngo Khac
 
 Time spent: 0 hours and doing (TODO)
 
@@ -16,20 +16,20 @@ URL: **heroku-app-url**
 * [x] User can see the address and phone number on the contact us page.
 * [x] User can see a basic google map on the Contact Us page.
 * [x] User can navigate to a menu page with four sections:
-	*x[x] Breakfast
-	* [x] Lunch
-	* [x] Dinner
-	* [x] Drinks
+  *x[x] Breakfast
+  * [x] Lunch
+  * [x] Dinner
+  * [x] Drinks
 * [x] User should see at least 5 food items in each section.
 * [x] Each food item should have the following fields:
-	* Name (Canh Chua)
-	* Description (Delicious fish soup)
-	* Price (VND)
-	* Section - Breakfast, Lunch, Dinner, Drinks
-	* Image URL - do a google search or use LoremFlickr: http://loremflickr.com/320/240/canhchua
+  * Name (Canh Chua)
+  * Description (Delicious fish soup)
+  * Price (VND)
+  * Section - Breakfast, Lunch, Dinner, Drinks
+  * Image URL - do a google search or use LoremFlickr: http://loremflickr.com/320/240/canhchua
 * [x] User should be able to filter by section of Breakfast, Lunch, Dinner, or Drinks and see only the relevant items.
 * [ ] User can sort menu items by “alphabetical”, “price low to high”, and “price high to low”.
-* [ ] User should be able to search for a menu item and see results.
+* [x] User should be able to search for a menu item and see results.
 * [ ] Clicking on an item in the menu brings up its detail, where you see the description and a larger picture.
 * [ ] User can click “order” on a menu item to go to a “Create Order” page.
 * [ ] User is able to fill in their name, phone number, and address.
@@ -68,16 +68,16 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-		Copyright [yyyy] [name]
+    Copyright [yyyy] [name]
 
-		Licensed under the Apache License, Version 2.0 (the "License");
-		you may not use this file except in compliance with the License.
-		You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-				http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-		Unless required by applicable law or agreed to in writing, software
-		distributed under the License is distributed on an "AS IS" BASIS,
-		WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-		See the License for the specific language governing permissions and
-		limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
