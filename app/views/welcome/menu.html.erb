@@ -4,7 +4,9 @@
   <% Section.all.each do |section| %>
     <li class="nav-item">
       <%#pass a param to url menu_path(section: section.name)%>
-      <%= link_to section.name, menu_path(menu: section.name), class: "nav-link #{'active' if params[:menu] == section.name}" %> 
+      <%= link_to section.name, menu_path(section: section.name), class: "nav-link #{'active' if params[:section] == section.name}" %> 
     </li>
   <% end %>
 </ul>
+
+<%= render @food_items %>
