@@ -1,5 +1,3 @@
-<h1>Menu</h1>
-
 <ul class="nav nav-pills">
   <% Section.all.each do |section| %>
     <li class="nav-item">
@@ -9,4 +7,19 @@
   <% end %>
 </ul>
 
-<%= render @food_items %>
+<% if  @food_items.blank? %>
+  <h3>Sorry ! We don't serve it!</h3>
+<% else %>
+  <div class="card card-block">
+    <%= form_tag nil, method: 'get' do %>
+      <%= hidden_field_tag :section, params[:section] %>
+      <div class="form-inline">
+        <%= select_tag :sort_column, options_for_select([['Name', 'name'], ['Price', 'price']]), class: 'form-control' %>
+        <%= select_tag :sort_direction, options_for_select([['Ascending','asc'], ['Descending', 'desc']]), class: 'form-control' %>
+        <%= submit_tag 'Sort', class: 'btn btn-outline-primary' %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render @food_items %>
+<% end %>

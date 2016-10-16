@@ -1,34 +1,35 @@
 <h1>Food Item</h1>
-<table class="table table-hover">
-	<thead>
-		<tr>
-			<th>#</th>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Price</th>
-			<th>Section</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% if @food_items.count == 0 %>
-			<h2>Have no entry.</h2>
-		<% else %>
-			<% @food_items.each do |item| %>
+<% if @food_items.count == 0 %>
+	<h2>Have no entry.</h2>
+<% else %>
+	<table class="table table-hover">
+		<thead>
 			<tr>
-				<th scope="row"><%= item.id %></th>
-				<td><%= link_to item.name, food_item_path(item) %></td>
-				<td>
-					<% if item.description == "" %>
-						<p>No Description</p>
-					<% else %>
-						<%= item.description %></td>
-					<% end %>
-				<td><%= number_to_currency(item.price, unit: 'VND ', format: '%n %u', separator: ',', delimiter: '.')%></td>
-				<td><%= Section.find(item.section_id).name %></td>
+				<th>#</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Section</th>
 			</tr>
-		</tbody>
+		</thead>
+	<tbody>
+		<% @food_items.each do |item| %>
+		<tr>
+			<th scope="row"><%= item.id %></th>
+			<td><%= link_to item.name, food_item_path(item) %></td>
+			<td>
+				<% if item.description == "" %>
+					<p>No Description</p>
+				<% else %>
+					<%= item.description %></td>
+				<% end %>
+			<td><%= number_to_currency(item.price, unit: 'VND ', format: '%n %u', separator: ',', delimiter: '.')%></td>
+			<td><%= Section.find(item.section_id).name %></td>
+		</tr>
 		<% end %>
+	</tbody>
 </table>
+
 <% end %>
 
 <%= link_to 'New Food Items', new_food_item_path , class: 'btn btn-outline-primary'%>
