@@ -15,6 +15,9 @@
 				<li class="nav-item">
 					<%= link_to "Menu", menu_path, class: "nav-link #{'active' if request.original_fullpath == "/menu" }" %>
 				</li>
+				<li class="nav-item nav-link">
+					<%= "Order ("+ current_order.order_items.size.to_s+")" %>
+				</li>
 				<li class="nav-item">
 					<%= link_to "Contact US", contact_us_path, class: "nav-link #{'active' if request.original_fullpath == "/contact_us" }"%>
 				</li>
@@ -27,7 +30,7 @@
 			</div>
 		</nav>
 		
-		<div class="container">
+		<div class="container" style="padding-top: 2em;">
 			<%= yield %>
 		</div>
 	</body>
