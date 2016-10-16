@@ -1,2 +1,10 @@
-<h1>Welcome#menu</h1>
-<p>Find me in app/views/welcome/menu.html.erb</p>
+<h1>Menu</h1>
+
+<ul class="nav nav-pills">
+  <% Section.all.each do |section| %>
+    <li class="nav-item">
+      <%#pass a param to url menu_path(section: section.name)%>
+      <%= link_to section.name, menu_path(menu: section.name), class: "nav-link #{'active' if params[:menu] == section.name}" %> 
+    </li>
+  <% end %>
+</ul>
